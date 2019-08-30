@@ -1,15 +1,18 @@
 ## Release Notes
 
-### Next
-* feat: `getUsedMemory` (https://github.com/rebeccahughes/react-native-device-info/pull/356)
+### 3.0.0-rc.1
+
+* BREAKING CHANGE: Everything returns a Promise now. No more constants (no more explicit async Android constructor)
+* BREAKING CHANGE: Renamed getSupportedABIs to getSupportedAbis for consistency with other getXxxAbis methods
 * BREAKING CHANGE: all events prefixed with 'RNDeviceInfo_' to future-proof against collisions (https://github.com/react-native-community/react-native-device-info/issues/620)
- * feat: getDeviceName() without Bluetooth permission on Android (https://github.com/react-native-community/react-native-device-info/issues/735)
- * BREAKING CHANGE: Android `getBuildNumber` now returns a string (https://github.com/react-native-community/react-native-device-info/pull/648)
+* BREAKING CHANGE: Android `getBuildNumber` returns string like iOS (https://github.com/react-native-community/react-native-device-info/pull/648)
+* BREAKING CHANGE: remove is24Hour, getTimezone, isAutoTimeZone and isAutoDateAndTime, getDeviceLocale, getDeviceCountry, getPreferredLocales. react-native-localize is superior
+* BREAKING CHANGE: iOS switch deprecated WebView for WebKit / getUserAgent returns Promise (https://github.com/react-native-community/react-native-device-info/pull/757)
 * deprecated: IP-address-related methods deprecated - use @react-native-community/netinfo or react-native-network-info or react-native-carrier-info
-* feat: TurboModule support (https://github.com/react-native-community/react-native-device-info/pull/745)
-* BREAKING CHANGE: remove is24Hour, getTimezone, isAutoTimeZone and isAutoDateAndTime, getDeviceLocale, getDeviceCountry, getPreferredLocales. react-native-localize is superior for these purposes (https://github.com/react-native-community/react-native-localize/pull/65)
+* feat: `getUsedMemory` (https://github.com/rebeccahughes/react-native-device-info/pull/356)
+* feat: getDeviceName() without Bluetooth permission on Android (https://github.com/react-native-community/react-native-device-info/issues/735)
+* feat: TurboModule support (https://github.com/react-native-community/react-native-device-info/pull/745) for these purposes (https://github.com/react-native-community/react-native-localize/pull/65)
 * feat: allow for destructured ES6 imports (https://github.com/react-native-community/react-native-device-info/pull/727)
-* BREAKING CHANGE: remove deprecated iOS WebView / promises (https://github.com/react-native-community/react-native-device-info/pull/757)
 * fix: remove unnecessary gradle depencies (https://github.com/react-native-community/react-native-device-info/pull/746)
 
 ### 2.3.2
